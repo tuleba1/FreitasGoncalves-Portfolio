@@ -1,24 +1,96 @@
-export default function Equipe() {
-    const team = [
-        { name: 'Nome do Colaborador', role: 'Cargo do Colaborador' },
-        { name: 'Nome do Colaborador', role: 'Cargo do Colaborador' },
-        { name: 'Nome do Colaborador', role: 'Cargo do Colaborador' },
-    ];
+"use client";
 
+import { motion } from "framer-motion";
+import Image from "next/image";
+import MembrosEquipe from "./MembrosEquipe";
+import ObrasCarousel from "./ObrasCarrousel";
+
+import colaborador1 from "@/../public/assets/image 16.png";
+import colaborador2 from "@/../public/assets/image 16.png";
+import colaborador3 from "@/../public/assets/image 16.png";
+
+import obra1 from "@/../public/assets/image 10.png";
+import obra2 from "@/../public/assets/image 10.png";
+import obra3 from "@/../public/assets/image 10.png";
+import obra4 from "@/../public/assets/image 10.png";
+import obra5 from "@/../public/assets/image 10.png";
+
+const colaboradores = [
+    {
+        name: "João Silva",
+        role: "Engenheiro Civil Sênior",
+        image: colaborador1,
+    },
+    {
+        name: "Maria Oliveira",
+        role: "Arquiteta de Projetos",
+        image: colaborador2,
+    },
+    {
+        name: "Pedro Souza",
+        role: "Gerente de Obras",
+        image: colaborador3,
+    },
+];
+
+// Repetindo as imagens para dar mais volume ao carrossel
+const obras = [...Array(3)].flatMap(() => [obra1, obra2, obra3, obra4, obra5]);
+
+export default function Equipe() {
     return (
-        <section className="py-12 bg-gray-100">
-            <div className="container mx-auto">
-                <h2 className="text-red-700 font-bold mb-2">Equipe</h2>
-                <h3 className="text-2xl font-bold mb-8">Time experiente e capacitado</h3>
-                <div className="grid md:grid-cols-3 gap-8">
-                    {team.map((t, i) => (
-                        <div key={i} className="bg-white p-6 rounded shadow hover:shadow-lg transition text-center">
-                            <img src="/path/to/person.jpg" alt={t.name} className="w-full h-48 object-cover rounded mb-4" />
-                            <h4 className="font-bold">{t.name}</h4>
-                            <p className="text-gray-600">{t.role}</p>
-                        </div>
+        <section className="py-20 px-6"> 
+            <div className="max-w-7xl mx-auto">
+                {/* Título */}
+                <motion.div
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <h3 className="text-red-700 font-semibold text-lg tracking-wide mb-2">
+                        📌 Equipe e Obras Realizadas
+                    </h3>
+                    <h2 className="text-4xl font-extrabold text-gray-900">
+                        Nossa Equipe de Profissionais
+                    </h2>
+                </motion.div>
+
+                <motion.div
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-20"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={{
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.3,
+                            },
+                        },
+                    }}
+                >
+                    {colaboradores.map((colaborador, i) => (
+                        <motion.div
+                            key={i}
+                            variants={{
+                                hidden: { opacity: 0, y: 50 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+                            }}
+                            whileHover={{ scale: 1.03 }}
+                            className="transition-transform"
+                        >
+                            <MembrosEquipe {...colaborador} />
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                >
+                    <ObrasCarousel images={obras} />
+                </motion.div>
             </div>
         </section>
     );
