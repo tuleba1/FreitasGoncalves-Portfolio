@@ -5,7 +5,7 @@ import Image from 'next/image';
 import image1 from '@/../public/assets/image 5.png'; 
 import image2 from '@/../public/assets/image 6.png'; 
 
-export default function Header() {
+export default function Hero() {
     return (
         <header className="relative">
             <div className="relative flex h-[500px] w-full">
