@@ -1,6 +1,5 @@
-// src/layouts/DefaultLayout.tsx
-import TopBar from "../../src/pages/component/TopBar"; // Use @/ para referenciar a raiz do src
-import Header from "../../src/pages/component/Header";
+import TopBar from "../../src/pages/component/TopBar"; 
+import Header from "../pages/component/Hero";
 import Footer from "../../src/pages/component/Footer";
 
 export default function DefaultLayout({ children }: { children: React.ReactNode }) {

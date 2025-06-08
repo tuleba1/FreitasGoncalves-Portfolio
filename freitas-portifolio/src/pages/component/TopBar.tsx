@@ -39,8 +39,8 @@ export default function TopBar() {
             <nav className={`hidden md:flex justify-center items-center bg-white shadow-md py-3 w-1/3 rounded-sm shadow-xl`}>
                 <div className="space-x-6">
                     <Link href="/" className={`text-gray-800 hover:text-red-600 transition duration-200 ${pathname === '/' ? 'font-semibold text-red-600' : ''}`}>Home</Link>
-                    <Link href="#sobre" className={`text-gray-800 hover:text-red-600 transition duration-200 ${pathname.includes('#sobre') ? 'font-semibold text-red-600' : ''}`}>Sobre</Link>
-                    <Link href="#servicos" className={`text-gray-800 hover:text-red-600 transition duration-200 ${pathname.includes('#servicos') ? 'font-semibold text-red-600' : ''}`}>Serviços</Link>
+                    <Link href="/sobre" className={`text-gray-800 hover:text-red-600 transition duration-200 ${pathname.includes('#sobre') ? 'font-semibold text-red-600' : ''}`}>Sobre</Link>
+                    <Link href="/servico" className={`text-gray-800 hover:text-red-600 transition duration-200 ${pathname.includes('#servicos') ? 'font-semibold text-red-600' : ''}`}>Serviços</Link>
                 </div>
             </nav>
 

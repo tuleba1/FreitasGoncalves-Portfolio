@@ -126,8 +126,6 @@ export default function Servicos() {
 
                             </div>
 
-                            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-md z-10">
-                            </div>
                         </div>
                     ))}
                 </div>
