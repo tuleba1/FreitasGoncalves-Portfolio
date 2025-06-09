@@ -2,13 +2,15 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import image1 from '@/../public/assets/image 5.png';
-import image2 from '@/../public/assets/image 6.png';
+import image1 from '@/../public/assets/image 5.png'; // ajuste o caminho conforme sua estrutura
+import image2 from '@/../public/assets/image 6.png'; // ajuste o caminho conforme sua estrutura
 
 export default function Hero() {
     return (
         <header className="relative">
+            {/* Container da imagem com clipPath */}
             <div className="relative flex h-[500px] w-full">
+                {/* Imagem 1 com 40% */}
                 <div className="relative h-full" style={{ width: '40%' }}>
                     <Image
                         src={image2}
@@ -19,6 +21,7 @@ export default function Hero() {
                     />
                 </div>
 
+                {/* Imagem 2 com 60% */}
                 <div className="relative h-full" style={{ width: '60%' }}>
                     <Image
                         src={image1}
@@ -29,6 +32,7 @@ export default function Hero() {
                     />
                 </div>
 
+                {/* Overlay poligonal */}
                 <div
                     className="pointer-events-none absolute inset-0"
                     style={{
@@ -37,6 +41,7 @@ export default function Hero() {
                     }}
                 />
             </div>
+            {/* Textos sobrepostos */}
             <div className="absolute top-1/5 left-10 max-w-xl text-white pt-[60px]">
                 <p className="text-sm text-gray-300">Planejar | Design | Construção</p>
                 <h1 className="text-5xl font-bold mt-4 leading-tight">
