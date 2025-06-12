@@ -5,8 +5,8 @@ import TopBar from "../component/TopBar";
 import Footer from "../component/Footer";
 
 export const metadata = {
-    title: "Seu Site",
-    description: "Descrição do site",
+    title: "Freitas Gonçalves",
+    description: "Portifolio",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
