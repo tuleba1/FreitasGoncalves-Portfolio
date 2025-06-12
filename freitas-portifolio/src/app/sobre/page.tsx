@@ -1,5 +1,7 @@
+"use client";
+
 import Head from "next/head";
-import HeroSobre from "./HeroSobre";
+import HeroSobre from "../../component/Servico/HeroServico";
 
 export default function AboutPage() {
     return (

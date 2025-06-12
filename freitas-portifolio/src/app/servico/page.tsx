@@ -1,7 +1,9 @@
+"use client";
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaHardHat, FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
-import HeroServico from "./HeroServico";
+import HeroServico from "../../component/Servico/HeroServico";
 
 export default function PageServicos() {
     useEffect(() => {

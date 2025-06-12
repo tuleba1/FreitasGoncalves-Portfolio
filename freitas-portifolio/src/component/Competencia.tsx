@@ -1,3 +1,5 @@
+"use client";
+
 export default function Competencia() {
     const kpis = [
         { label: 'Obras concluídas', value: '50+' },

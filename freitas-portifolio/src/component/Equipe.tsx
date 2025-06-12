@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import MembrosEquipe from "./MembrosEquipe";
-import ObrasCarousel from "./ObrasCarrousel";
+import ObrasCarousel from "./UI/Carrousel/ObrasCarrousel";
 
 import colaborador1 from "@/../public/assets/image 16.png";
 import colaborador2 from "@/../public/assets/image 16.png";
@@ -38,7 +38,7 @@ const obras = [...Array(3)].flatMap(() => [obra1, obra2, obra3, obra4, obra5]);
 
 export default function Equipe() {
     return (
-        <section className="py-20 px-6"> 
+        <section className="py-20 px-6">
             <div className="max-w-7xl mx-auto">
                 {/* Título */}
                 <motion.div

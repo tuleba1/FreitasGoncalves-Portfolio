@@ -1,3 +1,5 @@
+"use client";
+
 import Image, { StaticImageData } from "next/image";
 import { useKeenSlider } from "keen-slider/react";
 import { useEffect } from "react";
