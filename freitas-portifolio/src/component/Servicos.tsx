@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import { Paintbrush } from "lucide-react"; 
+import { Paintbrush } from "lucide-react";
 import bgImage from "@/../public/assets/image 7.png";
 import servicoImg from "@/../public/assets/image 22.png";
 
@@ -38,8 +40,8 @@ export default function Servicos() {
                 <Image
                     src={bgImage}
                     alt="Construção"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: "cover" }}
                     quality={90}
                     className="opacity-50"
                 />
@@ -62,8 +64,8 @@ export default function Servicos() {
                             <Image
                                 src={service.image}
                                 alt={service.title}
-                                layout="fill"
-                                objectFit="cover"
+                                fill
+                                style={{ objectFit: "cover" }}
                                 className="group-hover:scale-110 transition-transform duration-500"
                             />
 
@@ -95,7 +97,7 @@ export default function Servicos() {
                                     </defs>
                                 </svg>
 
-                              
+
                                 <div className="absolute bottom-0 left-0 w-full px-5 pb-4 flex items-center gap-4 z-10">
                                     <div
                                         className="
@@ -109,7 +111,7 @@ export default function Servicos() {
     "
                                         style={{
                                             filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.3))",
-                                            bottom: '8px',  
+                                            bottom: '8px',
                                         }}
                                     >
                                         <Paintbrush size={20} className="text-red-600" />

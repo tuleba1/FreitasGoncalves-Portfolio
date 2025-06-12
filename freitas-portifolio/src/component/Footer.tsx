@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import logo from "@/../public/assets/Group 3.png";
 import { FaInstagram, FaFacebookF, FaWhatsapp } from "react-icons/fa";
